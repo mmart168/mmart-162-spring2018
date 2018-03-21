@@ -17,11 +17,11 @@ https.get(url, (response) => {
         // loop through each element of the arrayOfHTMLSnippets
         arrayOfHTMLSnippets.forEach(elem => {
             // split on the closing tag:
-            const stuffThatComesAfterEachClosingTag = elem.split('>')
-            console.log(stuffThatComesAfterEachClosingTag)
+            const stuffThatComesBeforeEachClosingTag = elem.split('>')
+            //console.log(stuffThatComesBeforeEachClosingTag)
 
             // get the last chunk of text in the array:
-            const innerHTMLLast = stuffThatComesAfterEachClosingTag[stuffThatComesAfterEachClosingTag.length - 1]
+            const innerHTMLLast = stuffThatComesBeforeEachClosingTag[stuffThatComesBeforeEachClosingTag.length - 1]
 
             //split the sentence into words:
             const words = innerHTMLLast.split(' ')
